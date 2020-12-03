@@ -1,27 +1,11 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include <string>
 #include <vector>
 
-std::vector<std::string> readFile(std::string fileName) {
-    std::ifstream inputFile(fileName);
-    if (!inputFile) {
-        throw "Unable to read file " + fileName;
-    }
-
-    std::vector<std::string> lines;
-    std::string line;
-
-    while (std::getline(inputFile, line)) {
-        lines.push_back(line);
-    }
-
-    return lines;
-}
+#include "../library/io/files.h"
 
 int main() {
-    std::vector<std::string> data = readFile("../data/day1_input");
+    auto const data = readFile("../data/day1_input");
     int target = 2020;
     
     for (int idx1 = 0; idx1 < data.size(); idx1++) {
