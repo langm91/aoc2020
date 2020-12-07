@@ -8,9 +8,11 @@
 int main() {
     auto data = readFile("../data/day18_input");
 
-    long answer = 0;
+    long answer1 = 0;
+    long answer2 = 0;
 
-    std::cout << "Answer: " << answer << std::endl;
+    std::cout << "Answer 1: " << answer1 << std::endl;
+    std::cout << "Answer 2: " << answer2 << std::endl;
 
     return 0;
 }
