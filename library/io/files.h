@@ -1,4 +1,6 @@
 #include <string>
 #include <vector>
 
-std::vector<std::string> readFile(std::string fileName);
+using strvec = std::vector<std::string>;
+
+strvec readFile(std::string fileName);

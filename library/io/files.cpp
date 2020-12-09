@@ -6,13 +6,13 @@
 
 #include "files.h"
 
-std::vector<std::string> readFile(std::string fileName) {
+strvec readFile(std::string fileName) {
     std::ifstream inputFile(fileName);
     if (!inputFile) {
         throw "Unable to read file " + fileName;
     }
 
-    std::vector<std::string> lines;
+    strvec lines;
     std::string line;
 
     while (std::getline(inputFile, line)) {
