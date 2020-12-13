@@ -21,3 +21,10 @@ strvec readFile(std::string fileName) {
 
     return lines;
 }
+
+std::vector<long> readLongFile(std::string fileName) {
+    strvec file = readFile(fileName);
+    std::vector<long> longFile {};
+    for (auto line : file) longFile.push_back(std::stol(line));
+    return longFile;
+}
